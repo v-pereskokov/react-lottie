@@ -1,35 +1,64 @@
 {
-  "name": "@v-pereskokov/react-lottie",
-  "version": "1.0.0",
-  "description": "Lib for react-lottie ",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1",
-    "build": "rm -rf ./lib && tsc",
-    "prepare": "npm install && npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/v-pereskokov/react-lottie.git"
-  },
-  "keywords": [
-    "react",
-    "lottie",
-    "typescript"
-  ],
-  "author": "v-pereskokov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/v-pereskokov/react-lottie/issues"
-  },
-  "homepage": "https://github.com/v-pereskokov/react-lottie#readme",
-  "dependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "@types/react": "17.0.21",
-    "@types/react-dom": "17.0.9",
-    "typescript": "4.4.3"
-  }
+    "name": "@v-pereskokov/react-lottie",
+    "version": "1.0.0",
+    "description": "Lib for web-lottie ",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "echo \\\"Error: no test specified\\\" && exit 1",
+        "build": "rm -rf ./lib && tsc",
+        "prepare": "npm run build",
+        "lint": "npm-run-all lint:*",
+        "lint:style": "npx stylelint './**/*.{css,scss}'",
+        "lint:src": "npx eslint --ext=.ts,.tsx ./",
+        "fix": "npm-run-all fix:lint:*",
+        "fix:lint:src": "npx eslint --fix --ext=.ts,.tsx ./",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/v-pereskokov/react-lottie.git"
+    },
+    "keywords": [
+        "react",
+        "lottie",
+        "typescript"
+    ],
+    "author": "v-pereskokov",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/v-pereskokov/react-lottie/issues"
+    },
+    "homepage": "https://github.com/v-pereskokov/react-lottie#readme",
+    "dependencies": {
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+    },
+    "devDependencies": {
+        "@babel/core": "7.15.5",
+        "@storybook/addon-actions": "6.3.8",
+        "@storybook/addon-essentials": "6.3.8",
+        "@storybook/addon-links": "6.3.8",
+        "@storybook/cli": "6.3.8",
+        "@storybook/react": "6.3.8",
+        "@types/react": "17.0.21",
+        "@types/react-dom": "17.0.9",
+        "@typescript-eslint/eslint-plugin": "2.18.0",
+        "@typescript-eslint/parser": "3.8.0",
+        "babel-loader": "8.2.2",
+        "eslint": "6.8.0",
+        "eslint-config-airbnb": "17.1.0",
+        "eslint-config-prettier": "4.1.0",
+        "eslint-config-react-app": "6.0.0",
+        "eslint-plugin-eslint-comments": "3.1.2",
+        "eslint-plugin-eslint-plugin": "2.2.1",
+        "eslint-plugin-flowtype": "2.50.3",
+        "eslint-plugin-import": "2.20.0",
+        "eslint-plugin-jsx-a11y": "6.2.1",
+        "eslint-plugin-prettier": "3.0.1",
+        "eslint-plugin-react": "7.22.0",
+        "eslint-plugin-react-hooks": "4.2.0",
+        "npm-run-all": "4.1.5",
+        "typescript": "4.4.3"
+    }
 }

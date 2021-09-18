@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {FC, memo} from 'react';
 
-const Hello: React.FC = () => {
+const Hello: FC = () => {
     return (
         <div>
             Hello
@@ -8,4 +8,4 @@ const Hello: React.FC = () => {
     );
 };
 
-export default React.memo(Hello);
+export default memo(Hello);
