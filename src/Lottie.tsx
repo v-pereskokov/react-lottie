@@ -34,11 +34,13 @@ const Lottie: Props = ({
             refPlayer.destroy();
         }
 
-        const newRefPlayer = lottie.loadAnimation({
-            ...config,
-            container: (config?.container ?? localRef?.current) as Element,
-        });
-        handleUpdateRefPlayer(newRefPlayer);
+        if (typeof lottie.loadAnimation === 'function') {
+            const newRefPlayer = lottie.loadAnimation({
+                ...config,
+                container: (config?.container ?? localRef?.current) as Element,
+            });
+            handleUpdateRefPlayer(newRefPlayer);
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [config, localRef, previousRef]);
 
