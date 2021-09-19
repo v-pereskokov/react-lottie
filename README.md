@@ -6,3 +6,4 @@ TODO
 4. storybook
 5. gh actions
 6. auto publish
+7. readme
