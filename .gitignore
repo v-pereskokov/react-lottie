@@ -22,3 +22,4 @@ package-lock.json
 client/config/dev-hosts.json
 /webpack/vendors-manifest.json
 __tests__/__snapshots__
+lib
